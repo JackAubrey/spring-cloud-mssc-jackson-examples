@@ -1,5 +1,7 @@
 package guru.springframework.msscjacksonexamples.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,8 +21,10 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonPropertyOrder(alphabetic = true)
 public class BeerDto {
-
+    // Remember: JsonProperty annotation overrider the PropertyNamingStrategy
+    @JsonProperty("beerId")
     @Null
     private UUID id;
 

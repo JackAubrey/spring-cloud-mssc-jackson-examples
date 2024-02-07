@@ -23,7 +23,7 @@ class BeerDtoKebabTest extends Base {
     void testDeserializeJson() throws JsonProcessingException {
         String jsonString = """
                 {
-                  "id" : "beba3d65-d217-469a-8831-3a4d69950bdb",
+                  "beerId" : "beba3d65-d217-469a-8831-3a4d69950bdb",
                   "beer-name" : "BeerName",
                   "beer-style" : "Ale",
                   "upc" : 123456789,

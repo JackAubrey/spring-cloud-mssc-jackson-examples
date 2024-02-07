@@ -24,7 +24,7 @@ class BeerDtoJacksonPropertyTest extends Base {
     void testDeserializeJson() throws JsonProcessingException {
         String jsonString = """
                 {
-                  "id" : "a3c0a704-d7a7-4ae3-929e-79fde2bcda6f",
+                  "beerId" : "a3c0a704-d7a7-4ae3-929e-79fde2bcda6f",
                   "beer_name" : "BeerName",
                   "beer_style" : "Ale",
                   "upc" : 123456789,
