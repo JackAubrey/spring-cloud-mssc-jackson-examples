@@ -29,7 +29,8 @@ class BeerDtoKebabTest extends Base {
                   "upc" : 123456789,
                   "price" : 12.99,
                   "created-date" : "2024-02-07T12:03:06+0100",
-                  "last-updated-date" : "2024-02-07T12:03:06.94512635+01:00"
+                  "last-updated-date" : "2024-02-07T12:03:06.94512635+01:00",
+                  "my-local-date" : "20240207"
                 }
                 """;
 

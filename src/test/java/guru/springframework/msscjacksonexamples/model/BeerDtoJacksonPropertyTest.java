@@ -30,7 +30,8 @@ class BeerDtoJacksonPropertyTest extends Base {
                   "upc" : 123456789,
                   "price" : 12.99,
                   "created_date" : "2024-02-07T11:58:05+0100",
-                  "last_updated_date" : "2024-02-07T11:58:05.878748765+01:00"
+                  "last_updated_date" : "2024-02-07T11:58:05.878748765+01:00",
+                  "my_local_date" : "20240207"
                 }
                 """;
 
