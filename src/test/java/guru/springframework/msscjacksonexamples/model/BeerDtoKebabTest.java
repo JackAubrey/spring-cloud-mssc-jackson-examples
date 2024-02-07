@@ -4,10 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.json.JsonTest;
+import org.springframework.test.context.ActiveProfiles;
 
+@ActiveProfiles("kebab")
 @Slf4j
 @JsonTest
-class BeerDtoTest extends Base {
+class BeerDtoKebabTest extends Base {
     @Test
     void testSerializeDto() throws JsonProcessingException {
         BeerDto beerDto = getBeerDto();
@@ -20,7 +22,15 @@ class BeerDtoTest extends Base {
     @Test
     void testDeserializeJson() throws JsonProcessingException {
         String jsonString = """
-                {"id":"8a8d653d-5f30-492d-8ee2-68508990a005","beerName":"BeerName","beerStyle":"Ale","upc":123456789,"price":12.99,"createdDate":"2024-02-07T11:57:12.820648305+01:00","lastUpdatedDate":"2024-02-07T11:57:12.82097965+01:00"}
+                {
+                  "id" : "beba3d65-d217-469a-8831-3a4d69950bdb",
+                  "beer-name" : "BeerName",
+                  "beer-style" : "Ale",
+                  "upc" : 123456789,
+                  "price" : 12.99,
+                  "created-date" : "2024-02-07T12:03:06.944736705+01:00",
+                  "last-updated-date" : "2024-02-07T12:03:06.94512635+01:00"
+                }
                 """;
 
         BeerDto beerDto = objectMapper.readValue(jsonString, BeerDto.class);
