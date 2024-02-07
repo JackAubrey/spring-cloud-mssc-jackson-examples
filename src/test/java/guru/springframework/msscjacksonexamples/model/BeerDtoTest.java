@@ -20,7 +20,7 @@ class BeerDtoTest extends Base {
     @Test
     void testDeserializeJson() throws JsonProcessingException {
         String jsonString = """
-                {"beerId":"8a8d653d-5f30-492d-8ee2-68508990a005","beerName":"BeerName","beerStyle":"Ale","upc":123456789,"price":12.99,"createdDate":"2024-02-07T11:57:12.820648305+01:00","lastUpdatedDate":"2024-02-07T11:57:12.82097965+01:00"}
+                {"beerId":"8a8d653d-5f30-492d-8ee2-68508990a005","beerName":"BeerName","beerStyle":"Ale","upc":123456789,"price":12.99,"createdDate":"2024-02-07T11:57:12+0100","lastUpdatedDate":"2024-02-07T11:57:12.82097965+01:00"}
                 """;
 
         BeerDto beerDto = objectMapper.readValue(jsonString, BeerDto.class);
